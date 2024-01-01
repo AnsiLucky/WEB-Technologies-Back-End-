@@ -4,22 +4,26 @@ const ageInput = document.getElementById('age');
 const form = document.getElementById('bmiForm');
 const bmiResult = document.getElementById('bmiResult');
 const statusResult = document.getElementById('statusResult');
+const sexButtons = document.getElementsByClassName('btn-field')[0];
 
 
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent the default form submission
-
   if (form.getElementsByClassName("is-valid").length != 3) {
     alert("Input Correct");
     return;
   }
 
+  console.log([...sexButtons.getElementsByClassName('bg-blue'),
+  ...sexButtons.getElementsByClassName('bg-pink')][0].textContent);
   // Prepare the data to be sent to the server
   const dataToSend = {
+    sex: [...sexButtons.getElementsByClassName('bg-blue'),
+    ...sexButtons.getElementsByClassName('bg-pink')][0].textContent,
+    age: ageInput.value,
     unit: unitDropdown.value,
     height: parseFloat(heightInput.value),
-    weight: parseFloat(weightInput.value),
-    age: ageInput.value
+    weight: parseFloat(weightInput.value)
   };
 
   // Send the form data to the server using Fetch API
@@ -78,13 +82,13 @@ ageInput.addEventListener("input", function (element) {
 
 function isValid(el, element) {
   let val = element.target.value.trim();
-  if (el.id == 'height' && !isNaN(val) && val > 40 && val < 300) {
+  if (el.id == 'height' && !isNaN(val) && val > 40 && val < 300 && parseInt(val) == val) {
     setValid(el);
     return true;
   } else if (el.id == 'weight' && !isNaN(val) && val > 2 && val < 300) {
     setValid(el);
     return true;
-  } else if (el.id == 'age' && !isNaN(val) && val > 0 && val < 200) {
+  } else if (el.id == 'age' && !isNaN(val) && val > 0 && val < 200 &&  parseInt(val) == val) {
     setValid(el);
     return true;
   } else {

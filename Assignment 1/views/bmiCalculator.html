@@ -30,9 +30,10 @@
   <script src="https://kit.fontawesome.com/0724e5b9c8.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body  
+style="background-image: linear-gradient(rgba(4, 9, 3, 0.7), rgba(4, 9, 3, 0.7)), url('/public/img/BMI_chart.png')" 
+class="header position-relative  w-100 position-relative">
   <section id="header"
-    style="background-image: linear-gradient(rgba(4, 9, 3, 0.7), rgba(4, 9, 3, 0.7)), url('/public/img/BMI_chart.png')"
     class="header position-relative min-vh-100 w-100 overflow-hidden position-relative">
     <nav class="justify-content-between align-items-center d-flex py-5">
       <a class="navbar-brand fs-1 text-info fw-bolder px-3 py-1" href="index">BMI Calculator</a>
@@ -41,11 +42,11 @@
       <!-- <a href="index"><img width="100px" src="images/logo.png" id="logo" alt="logo.png"></a> -->
       <div class="nav-links d-flex flex-grow-1 h-100 align-items-center mt-2">
         <ul class="list-unstyled m-0 h-100">
-          <li class="px-3 py-1 position-relative"><a href="/bmi"
-              class="text-decoration-none text-light fs-6">BMI</a></li>
-          <li class="px-3 py-1 position-relative"><a href="/news"
-              class="text-decoration-none text-light fs-6">MATH</a></li>
-          <li class="px-3 py-1 position-relative"><a href="/history" class="text-decoration-none text-light fs-6">HISTORY</a>
+          <li class="px-3 py-1 position-relative"><a href="/"
+              class="text-decoration-none text-light fs-6">HOME</a></li>
+          <li class="px-3 py-1 position-relative"><a href="/bmi/calculator"
+              class="text-decoration-none text-light fs-6">CALCULATOR</a></li>
+          <li class="px-3 py-1 position-relative"><a href="/history/history" class="text-decoration-none text-light fs-6">HISTORY</a>
           </li>
         </ul>
       </div>
@@ -58,8 +59,8 @@
           <div class="input-groups">
             <div class="dropdown px-0 overflow-hidden rounded-2 col-7 m-auto mb-3">
               <select id="unit" name="unit" class="btn-secondar input-field border-0 p-2 w-100" required>
-                <option value="cm">Metric (cm)</option>
-                <option value="inches">Imperial (in)</option>
+                <option value="metric">Metric (cm)</option>
+                <option value="imperial">Imperial (in)</option>
               </select>
             </div>
 
@@ -88,7 +89,7 @@
               <button type="button" class="transition-1 text-light bg-blue rounded-start-pill border-0 col-6 px-5 py-2"
                 id="male">Male</button>
               <button type="button"
-                class="transition-1 text-light bg-secondary rounded-end-pill bg-secondary border-0 col-6 px-5 py-2"
+                class="transition-1 text-light bg-secondary rounded-end-pill border-0 col-6 px-5 py-2"
                 id="female">Female</button>
             </div>
             <br>
@@ -114,6 +115,37 @@
             class="inputs w-100 bg-transparent border-0 form-control text-success fw-bold text-end px-4" value="" disabled>
         </div>
       </div>
+  </section>
+<!-- footer -->
+  <section id="footer" class="footer w-80 m-auto text-center mb-4 mt-0">
+    <div class="bg-light rounded-5 m-5 mt-0 mb-1 py-5 px-0">
+    <h4 class="h6 mt-3 mb-0 text-center fw-semibold">About Us</h4>
+    <hr width="6%" class="text-center m-auto">
+    <p class="text-secondary p-2 lh-base fw-light fs-14px mt-4">This BMI Calculator WebSite.<br> Assignment1 of WEB
+      Technologies(Back-End).</p>
+
+    <div class="row align-items-center gx-0 justify-content-between m-auto w-50">
+      <div class="col d-flex justify-content-center">
+        <a target="_blank" href="https://www.instagram.com/_ansi_sh_/">
+          <i class="fa fa-instagram text-info"></i>
+        </a>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <a target="_blank" href="https://t.me/ansinitro">
+          <i class="fa fa-telegram text-info"></i>
+        </a>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <a target="_blank" href="https://www.tiktok.com/@_ansi_sh_">
+          <i class="fa-brands fa-tiktok text-info"></i>
+        </a>
+      </div>
+    </div>
+
+    <p class="text-secondary p-2 lh-base fw-light fs-14px mt-4">®Made with <i class="fa fa-heart-o"></i> by Angsar<br> <i class="fa fa-heart-o"></i>  
+      SE-2202 <i class="fa fa-heart-o"></i> 
+    </p>
+  </div>
   </section>
 </body>
 <script src="/public/js/validation.js"></script>
